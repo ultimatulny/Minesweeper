@@ -1,13 +1,116 @@
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: 'Micro 5', sans-serif;
+    font-size: 64px;
+    color: green;
+}
+
+.MainMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.ButtonMenu {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.ButtonMenu:hover {
+    background-color: #d0ffb7;
+}
+
+.prod_checbox strong {
+    font-size: 14px;
+    color: #333;
+    display: inline-block;
+    margin-right: 10px;
+    letter-spacing: 0.5px;
+}
+
+.radio-toolbar input[type='radio'] {
+    display: none;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    padding: 2px 9px;
+    cursor: pointer;
+    border: 1px solid #dad0ff;
+}
+
+.radio-toolbar input[type='radio']:checked + label {
+    background-color: #d0ffb7;
+    border: 1px solid #1ca92e;
+}
+
+.radio-toolbar label:hover {
+    background-color: #d0ffb7;
+    border: 1px solid #1ca92e;
+}
+
+.nameInput {
+    margin: 20px 0;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.Leadership {
+    background-color: #dad0ff;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.Leadership h2 {
+    font-family: 'Micro 5', sans-serif;
+    font-size: 42px;
+    color: #1ca92e;
+}
+
+.Leadership__user {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+@media (max-width: 630px) {
+    .MainMenu h1 {
+        font-size: 36px;
+    }
+    .MainMenu .prod_checbox .radio-toolbar {
+        display: flex;
+        flex-direction: column;
+    }
+    .Leadership {
+        width: 100%;
+    }
 }

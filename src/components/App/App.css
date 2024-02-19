@@ -1,0 +1,18 @@
+@media (max-width: 900px) {
+    .gameBar {
+        box-sizing: border-box;
+        position: fixed;
+        top: 40px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        background-color: #8eda66;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .App {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
