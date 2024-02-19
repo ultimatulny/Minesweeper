@@ -38,3 +38,14 @@
 .exitButton:hover {
     color: black;
 }
+
+.changeRightClick {
+    border: none;
+    background-color: #666666;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+
+    margin: 10px auto;
+}

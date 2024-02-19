@@ -13,6 +13,7 @@ function Field({ rows, cols, bombs, hardlevel }) {
     const [timerId, setTimerId] = useState(null)
     const [smile, setSmile] = useState('😀')
     const [cellWidth, setCellWidth] = useState(50)
+    const [leftClickFlag, toggleLeftClickFlag] = useState(false)
 
     useEffect(() => {
         const windowWidth = +window.innerWidth
@@ -25,17 +26,17 @@ function Field({ rows, cols, bombs, hardlevel }) {
                 break
             case 2:
                 if (windowWidth <= 530) {
-                    setCellWidth(16)
+                    setCellWidth(20)
                 } else {
-                    setCellWidth(30)
+                    setCellWidth(25)
                 }
 
                 break
             case 3:
-                if (windowWidth <= 950) {
+                if (windowWidth <= 1200) {
                     setCellWidth(15)
                 } else {
-                    setCellWidth(25)
+                    setCellWidth(20)
                 }
                 break
             default:
@@ -198,6 +199,7 @@ function Field({ rows, cols, bombs, hardlevel }) {
                     checkWinner={checkWinner}
                     canClick={canClick}
                     cellWidth={cellWidth}
+                    leftClickFlag={leftClickFlag}
                 />,
             )
         }
@@ -211,6 +213,12 @@ function Field({ rows, cols, bombs, hardlevel }) {
                 <button onClick={() => resetGame()}>{smile}</button>
                 <div>⌛ {seconds}</div>
             </div>
+            <button
+                className='changeRightClick'
+                onClick={() => toggleLeftClickFlag((prevState) => !prevState)}
+            >
+                {leftClickFlag ? '🚩' : '☝'}
+            </button>
             <div className='Field'>
                 {gameFieldRender.map((row, i) => (
                     <div className='Field__row' key={i}>

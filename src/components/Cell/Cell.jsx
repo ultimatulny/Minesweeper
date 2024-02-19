@@ -10,13 +10,16 @@ function Cell({
     checkWinner,
     canClick,
     cellWidth,
+    leftClickFlag,
 }) {
     const cellCoords = coords
 
-    const clickOnCell = () => {
-        if (canClick) {
+    const clickOnCell = (event) => {
+        if (canClick && !leftClickFlag) {
             checkCell(cellData, cellCoords)
             checkWinner()
+        } else if (canClick && leftClickFlag) {
+            rightClick(event)
         }
     }
 
