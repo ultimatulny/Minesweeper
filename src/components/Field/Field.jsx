@@ -19,6 +19,9 @@ function Field({ rows, cols, bombs, hardlevel }) {
 
         switch (hardlevel) {
             case 1:
+                if (windowWidth <= 530) {
+                    setCellWidth(40)
+                }
                 break
             case 2:
                 if (windowWidth <= 530) {
