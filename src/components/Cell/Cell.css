@@ -10,6 +10,7 @@
     border-radius: 1px;
     margin: 1px;
     transition: 0.25s;
+    user-select: none;
 }
 
 .Field__row {
