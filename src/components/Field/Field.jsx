@@ -16,7 +16,7 @@ function Field({ rows, cols, bombs, hardlevel }) {
 
     useEffect(() => {
         const windowWidth = +window.innerWidth
-        alert(hardlevel)
+
         switch (hardlevel) {
             case 1:
                 break
