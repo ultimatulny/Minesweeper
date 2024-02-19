@@ -1,6 +1,9 @@
 <h1>Minesweeper</h1>
 
 Реализация игры сапёр на JavaScript с использованием библиотеки React
+
+Deploy: https://minesweeper-blush-eight.vercel.app/
+
 ![image](https://github.com/ultimatulny/Minesweeper/assets/31167599/c4347915-ce87-47ba-aab1-2dc9b2343a0c)
 ![image](https://github.com/ultimatulny/Minesweeper/assets/31167599/164082d9-f20c-41a0-9eeb-e92190f6387c)
 
