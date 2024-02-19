@@ -1,4 +1,4 @@
-Minesweeper
+<h1>Minesweeper</h1>
 
 Реализация игры сапёр на JavaScript с использованием библиотеки React
 ![image](https://github.com/ultimatulny/Minesweeper/assets/31167599/c4347915-ce87-47ba-aab1-2dc9b2343a0c)
