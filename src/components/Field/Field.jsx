@@ -22,14 +22,17 @@ function Field({ rows, cols, bombs, hardlevel }) {
         switch (hardlevel) {
             case 1:
                 if (windowWidth <= 530) {
-                    setCellWidth(40)
+                    setCellWidth(35)
+                }
+                if (windowWidth <= 300) {
+                    setCellWidth(30)
                 }
                 break
             case 2:
                 if (windowWidth <= 530) {
                     setCellWidth(20)
                 } else {
-                    setCellWidth(25)
+                    setCellWidth(20)
                 }
 
                 break
@@ -145,6 +148,8 @@ function Field({ rows, cols, bombs, hardlevel }) {
         const i = cellCoords[0]
         const j = cellCoords[1]
 
+        if (gamefield[i][j].flag !== 0) return
+
         // Если нажали на мину
         if (gamefield[i][j].data === -1) {
             clickOnBomb()
@@ -219,6 +224,7 @@ function Field({ rows, cols, bombs, hardlevel }) {
             >
                 {leftClickFlag ? '🚩' : '☝'}
             </button>
+
             <div className='Field'>
                 {gameFieldRender.map((row, i) => (
                     <div className='Field__row' key={i}>
@@ -226,6 +232,7 @@ function Field({ rows, cols, bombs, hardlevel }) {
                     </div>
                 ))}
             </div>
+
             <Link className='exitButton' to='/'>
                 Выйти в меню
             </Link>
