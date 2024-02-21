@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { generateField } from '../../game'
 import Counter from '../Counter'
 import { Link } from 'react-router-dom'
+import { fakeLeadership } from '../../game'
 
 function Field({ rows, cols, bombs, hardlevel }) {
     const [gamefield, setGameField] = useState(generateField(rows, cols, bombs))
@@ -83,8 +84,7 @@ function Field({ rows, cols, bombs, hardlevel }) {
             if (leadership) {
                 leadership = JSON.parse(leadership)
             } else {
-                localStorage.setItem('leadership', JSON.stringify({}))
-                leadership = {}
+                leadership = fakeLeadership
             }
             let userName = localStorage.getItem('userName')
             leadership[userName] = seconds

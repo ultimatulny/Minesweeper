@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { fakeLeadership } from '../game'
 
 function Leadership() {
     const [leadership, setLeadership] = useState({})
@@ -10,7 +11,8 @@ function Leadership() {
             storedLeadership = JSON.parse(storedLeadership)
             setLeadership(storedLeadership)
         } else {
-            localStorage.setItem('leadership', JSON.stringify({ Alex: 12 }))
+            localStorage.setItem('leadership', JSON.stringify(fakeLeadership))
+            setLeadership(fakeLeadership)
         }
     }, [])
 

@@ -47,4 +47,17 @@ const generateField = (rows, cols, bombs) => {
     return field
 }
 
-export { generateField }
+const fakeLeadership = {
+    Миша: 10,
+    Катя: 15,
+    Рома: 20,
+    Максим: 25,
+    Саша: 30,
+    Дима: 35,
+    Артур: 40,
+    Женя: 45,
+    Оля: 55,
+    Ира: 70,
+}
+
+export { generateField, fakeLeadership }
