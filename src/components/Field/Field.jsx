@@ -68,7 +68,7 @@ function Field({ rows, cols, bombs, hardlevel }) {
             })
         })
         setGameField(copyGamefield)
-        setSmile('🥲')
+        setSmile('😭')
         updateCanClick(false)
         clearInterval(timerId)
     }
